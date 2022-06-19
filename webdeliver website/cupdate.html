@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="E:\mugish\New folder\webdeliver website\cupdate.css">
+
+     <!-- font awesome for font  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>COVID-19 case in <span id="country"></span><img src="" id="flag"></h2>
+        
+        <div class="board">
+            <div class="card a">
+                <i class="fa fa-tachometer"></i>
+                <h5>Active Cases</h5>
+                <span id = "Active"></span>
+            </div>
+
+            <div class="card ca">
+                <i class="fa fa-tachometer"></i>
+                <h5>Total Cases</h5>
+                <span id = "Cases"></span>
+            </div>
+
+            <div class="card cr">
+                <i class="fa fa-tachometer"></i>
+                <h5>Critical Cases</h5>
+                <span id = "critical"></span>
+            </div>
+
+            <div class="card d">
+                <i class="fa fa-tachometer"></i>
+                <h5>Total Death</h5>
+                <span id = "Death"></span>
+            </div>
+
+            <div class="card r">
+                <i class="fa fa-tachometer"></i>
+                <h5>Recovered Cases</h5>
+                <span id = "Recovered"></span>
+            </div>
+
+            <div class="card t">
+                <i class="fa fa-tachometer"></i>
+                <h5>Total Test Done</h5>
+                <span id = "tests"></span>
+            </div>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript">
+    fetch('https//corona.lmao.ninja/v2/countries/India')
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        document.getElementById("flag").src = data.countryInfo.flag;
+
+        document.getElementById("country").src = datI.countryInfo.country;
+
+        document.getElementById("cases").src = datI.countryInfo.cases;
+
+        document.getElementById("critical").src = datI.countryInfo.critical;
+
+        document.getElementById("death").src = datI.countryInfo.death;
+
+        document.getElementById("recovered").src = datI.countryInfo.recovered;
+
+        document.getElementById("tests").src = datI.countryInfo.tests;
+
+        document.getElementById("active").src = datI.countryInfo.active;
+
+    })
+
+</script>
